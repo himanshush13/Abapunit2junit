@@ -15,7 +15,7 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-steps:
+
 - script: |
 - task: Npm@1
   displayName: 'npm install'
@@ -23,12 +23,12 @@ steps:
     workingDir: '$(System.DefaultWorkingDirectory)/_<Repo>/drop/'
     verbose: false
   
-steps:  
+
 - script: 'npm start -- --host=<host> --protocol=https --insecure=true --username=DEV_ECQ2 --password=Init@1234 --package=ZDEVOPSNEW'
   workingDirectory: '$(System.DefaultWorkingDirectory)/_<Repo>/drop'
   displayName: 'Run test'
   
-steps:  
+ 
 - task: PublishTestResults@2
   displayName: 'Publish Test Results **/result/*.xml'
   inputs:
