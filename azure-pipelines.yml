@@ -23,7 +23,6 @@ steps:
   
 
 - script: 'npm start -- --host=<host> --protocol=https --insecure=true --username=DEV_ECQ2 --password=Init@1234 --package=ZDEVOPSNEW'
-  
   displayName: 'Run test'
   
  
