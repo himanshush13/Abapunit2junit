@@ -19,13 +19,11 @@ steps:
 - script: |
 - task: Npm@1
   displayName: 'npm install'
-  inputs:
-    workingDir: '$(System.DefaultWorkingDirectory)/_<Repo>/drop/'
-    verbose: false
+  
   
 
 - script: 'npm start -- --host=<host> --protocol=https --insecure=true --username=DEV_ECQ2 --password=Init@1234 --package=ZDEVOPSNEW'
-  workingDirectory: '$(System.DefaultWorkingDirectory)/_<Repo>/drop'
+  
   displayName: 'Run test'
   
  
