@@ -22,7 +22,7 @@ steps:
   
   
 
-- script: 'npm start -- --host=in-blr-1709.corp.capgemini.com --protocol=https --username=DEV_ECQ2 --password=Init@1234 --client=600 --package=%ZDEVOPSNEW' --insecure 
+- script: 'npm start -- --host=in-blr-1709.corp.capgemini.com --protocol=https --username=DEV_ECQ2 --password=Init@1234 --client=600 --package=%ZDEVOPSNEW --insecure=true' 
   displayName: 'Run test'
   
  
