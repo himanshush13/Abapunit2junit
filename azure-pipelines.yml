@@ -13,20 +13,16 @@ steps:
 - task: NodeTool@0
   inputs:
     versionSpec: '10.x'
-  displayName: 'Install Node.js'
+  displayName: 'GIT Checkout'
 
 
 - script: |
 - task: Npm@1
-  displayName: 'npm install'
+  displayName: 'Code Review'
   
   
 
-- script: 'npm start -- --host=in-blr-1709.corp.capgemini.com --protocol=http --client=600 --insecure=true --username=DEV_ECQ2 --password=Init@1234 --package=ZDEVOPSNEW'
+- script: 'npm start -- --host=in-blr-1709.corp.capgemini.com --protocol=https --username=DEV_ECQ2 --password=Init@1234 --client=600 --package=ZDEVOPSNEW' --insecure 
   displayName: 'Run test'
   
  
-- task: PublishTestResults@2
-  displayName: 'Publish Test Results **/result/*.xml'
-  inputs:
-    testResultsFiles: '**/result/*.xml'  
