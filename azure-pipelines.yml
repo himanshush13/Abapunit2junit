@@ -21,8 +21,10 @@ steps:
   displayName: 'Code Review'
   
   
-
-- script: 'npm run --host=<host> --protocol=<protocol> --username=<username> --password=<password> --client=<client> --package=<package> --insecure=false' 
+- script: 'npm install'
+  dispalyName: 'Install npm'
+   
+- script: 'npm start -- --host=<host> --protocol=<http/https> --username=<user> --password=<password> --package=<package name> --insecure=false' 
   displayName: 'Run test'
   
  
