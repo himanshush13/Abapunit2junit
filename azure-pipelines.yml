@@ -22,7 +22,7 @@ steps:
   
   
 - script: 'npm install'
-  dispalyName: 'Install npm'
+  displayName: 'Install npm'
    
 - script: 'npm start -- --host=<host> --protocol=<http/https> --username=<user> --password=<password> --package=<package name> --insecure=false' 
   displayName: 'Run test'
